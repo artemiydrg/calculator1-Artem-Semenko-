@@ -13,7 +13,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     permissions:
-      contents: read 
+      contents: read #This is required for actions/checkout
 
     steps:
       - uses: actions/checkout@v4
@@ -52,9 +52,9 @@ jobs:
       - name: Login to Azure
         uses: azure/login@v2
         with:
-          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_2FBDC0908293482ABD78A791E2C73806 }}
-          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_D9A1A1E064F94B96B689DE6F9C02496C }}
-          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_2465D4F006944561BB7C325C381C73B9 }}
+          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_8D7588BCDCD94B3FBEA9429EC54D6F44 }}
+          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_733A1B5B8EFA4620B6BB9DC5BEEC7834 }}
+          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_C92F030B5D6F4950A0EBB3AF1D5C1767 }}
 
       - name: Deploy to Azure Web App
         id: deploy-to-webapp
